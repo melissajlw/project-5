@@ -10,6 +10,14 @@ import os
 
 load_dotenv()
 
+# render_as_batch
+app = Flask(
+  __name__,
+  static_url_path='',
+  static_folder='../client/dist',
+  template_folder='../client/dist'
+)
+
 naming_convention = {
     "ix": "ix_%(column_0_label)s",
     "uq": "uq_%(table_name)s_%(column_0_name)s",
